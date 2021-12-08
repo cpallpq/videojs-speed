@@ -51,20 +51,19 @@ videojs.plugin('speed', function(options) {
     player.ready(function() {
         var button = new videojs.SpeedButton(player, {
             el: videojs.Component.prototype.createEl(null, {
-                className: 'vjs-res-button vjs-menu-button vjs-control',
-                innerHTML: '<div class="vjs-control-content" style="font-size: 11px; line-height: 28px;"><span class="vjs-current-speed"></span></div>',
+                className: 'vjs-res-button vjs-menu-button vjs-control vjs-control-speed',
+                innerHTML: '<div class="vjs-control-content" style="font-size: 11px; line-height: 28px;">Slow video down &#10148; <span class="vjs-current-speed"></span></div>',
                 role: 'button'
             })
         });
         player.controlBar.speedButton = player.controlBar.addChild(button);
         changeSpeed(selectedItem);
-        
+
         try {
             if (player.c.P.id.indexOf('html5') == -1) { // FIXME player.c.P
-                button.hide();
+                //button.hide();
             }
         } catch (err) {
-            console.log("can't detect tech.");
         }
     });
 });
