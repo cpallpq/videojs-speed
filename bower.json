@@ -1,7 +1,7 @@
 {
   "name": "videojs-speed",
   "version": "0.9.0",
-  "main": "videojs.speed",
+  "main": "videojs-speed.js",
   "ignore": [],
   "dependencies": {
     "videojs": ">=4.7.3"    
